@@ -74,9 +74,7 @@ document.querySelectorAll('.js-add-to-cart')
       if(matchingItem)
       matchingItem.quantity++;
       else{
-       update(productId);
-        
-        cart.push(
+            cart.push(
           {
              productId:productId,
              quantity:1
