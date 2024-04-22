@@ -1,5 +1,6 @@
 import {products} from '../data/products.js'
 import {cart,addToCart} from '../data/cart.js'
+import {redo} from '../scripts/checkout.js'
 let productsHTML='';
 let cartHTML='';
  products.forEach((product)=>{
@@ -78,4 +79,19 @@ function updateCartQuantity(){
         .innerHTML=cartQuantity;
 }
 
+function update(productId){
+    
+  products.forEach((item)=>{
+      
+   if(productId===item.id)
+   {cartHTML+=`
+   <div class="product-name limit-text-to-2-lines">
+   ${item.name}
+   </div>`;
+console.log(cartHTML);
+
+  }
+  })
+ 
+}
 
