@@ -51,17 +51,6 @@ export function removeFromCart(productId) {
 
   saveToStorage();
 }
-function totalPrice(){
-  let productCost=0;
-  cart.forEach((product)=>{
-    totalCost+=product.priceCents*product.quantity;
-
-  })
-  document.querySelector('.cart-item-cost')
-  .innerHTML=productCost;
-  
-
-}
 export function updateDeliveryOption(productId,deliveryOptionId){
   let matchingItem;
   cart.forEach((item)=>{
