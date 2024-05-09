@@ -36,6 +36,7 @@ export function addToCart(productId) {
   }
 
   saveToStorage();
+  
 }
 
 export function removeFromCart(productId) {
