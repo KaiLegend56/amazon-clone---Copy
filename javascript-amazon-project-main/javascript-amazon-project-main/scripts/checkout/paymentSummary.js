@@ -52,7 +52,7 @@ export function renderPaymentSummary(){
       <div class="payment-summary-money">$${formatCurrency(costTotal)}</div>
     </div>
 
-    <button class="place-order-button button-primary">
+    <button class="place-order-button button-primary js-order-place-button">
       Place your order
     </button>
     `;
