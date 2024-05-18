@@ -6,7 +6,7 @@ document.querySelector('.js-order-place-button')
 })
 orderHistory=[];
 function placeOrder(){
-    
+    localStorage.setItem(JSON.stringify(orderHistory),'')
     orderHistory.push(cart);
     orderHistory.forEach((order)=>{
         productListHTML='';
