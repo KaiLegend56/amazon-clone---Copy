@@ -4,7 +4,10 @@ document.querySelector('.js-order-place-button')
 .addEventListener('click',()=>{
     placeOrder(cart);
 })
-orderHistory=[];
+class orderHistory{
+    productId;
+    
+}
 function placeOrder(){
     localStorage.setItem(JSON.stringify(orderHistory),'')
     orderHistory.push(cart);

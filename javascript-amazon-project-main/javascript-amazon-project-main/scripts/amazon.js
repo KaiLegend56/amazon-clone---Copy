@@ -29,7 +29,7 @@ products.forEach((product) => {
       </div>
 
       <div class="product-quantity-container">
-        <select>
+        <select class="quantity-select js-quantity-select" data-product-id="${product.id}">
           <option selected value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -42,7 +42,7 @@ products.forEach((product) => {
           <option value="10">10</option>
         </select>
       </div>
-
+      <div> ${product.extraInfoHtml()}</div>
       <div class="product-spacer"></div>
 
       <div class="added-to-cart">
@@ -79,3 +79,8 @@ document.querySelectorAll('.js-add-to-cart')
       updateCartQuantity();
     });
   });
+  /*document.querySelectorAll(".js-quantity-select").forEach((select)=>{
+    console.log(select.value);
+   
+  })*/
+  
