@@ -8,7 +8,7 @@ export function renderPaymentSummary(){
     let shippingDelivery=0;
     cart.forEach((cartItem)=>{
         let matchingItem=getProduct(cartItem.productId);
-       costExDelivery+= matchingItem.priceCents*cartItem.quantity
+       costExDelivery+=matchingItem.priceCents*cartItem.quantity
 
        
         const deliveryOption=getDeliveryOption(cartItem.deliveryOptionId);
