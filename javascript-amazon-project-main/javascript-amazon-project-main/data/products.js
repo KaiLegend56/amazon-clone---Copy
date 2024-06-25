@@ -81,8 +81,7 @@ class Product{
       else
       return new Product(productDetail);
     });
-    console.log(products);
-    console.log(products[0]);
+    console.log('products loaded');
     fun();
     
     });

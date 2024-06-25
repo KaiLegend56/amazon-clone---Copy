@@ -61,4 +61,4 @@ export function renderPaymentSummary(){
     .innerHTML=paymentSummaryHTML;
     
 }
-renderPaymentSummary();
+//renderPaymentSummary();

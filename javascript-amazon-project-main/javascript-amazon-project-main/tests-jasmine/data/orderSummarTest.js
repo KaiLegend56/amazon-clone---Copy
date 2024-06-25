@@ -1,4 +1,6 @@
 import {renderOrderSummary} from '../../scripts/checkout/orderSummary.js'
+import { loadProducts } from '../../data/products.js';
+
 describe('test-suite:renderOrderSummary',()=>{
     it('displays the cart',()=>{
         document.querySelector('.js-test-conntainer')
@@ -7,6 +9,12 @@ describe('test-suite:renderOrderSummary',()=>{
     })
         });
 
+    beforeAll((done)=>{
+        loadProducts();
+        done();
+    })
+        
+        
     it('it removes a product',()=>{
     const productId1='';
     const productId2='';
