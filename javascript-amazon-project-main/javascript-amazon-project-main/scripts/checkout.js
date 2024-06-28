@@ -3,6 +3,18 @@ import { renderPaymentSummary } from "./checkout/paymentSummary.js";
 import { loadProducts,loadProductsFetch } from "../data/products.js";
 import { loadCart } from "../data/cart.js";
 
+async function loadPage(){
+    console.log('start load');
+
+    await loadProductsFetch();
+
+    return 'value 2';
+}
+loadPage().then((value)=>
+    {
+        console.log('next step');
+        console.log(value);
+    });
 Promise.all(
     [
         loadProductsFetch().then(()=>{
