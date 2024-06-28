@@ -79,8 +79,8 @@ class Cart{
     
     
     
-    console.log(cartHome);
-    console.log(businessCart);
+    //console.log(cartHome);
+    //console.log(businessCart);
     
     
     
