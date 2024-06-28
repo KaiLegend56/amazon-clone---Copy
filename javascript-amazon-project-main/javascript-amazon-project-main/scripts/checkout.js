@@ -4,17 +4,24 @@ import { loadProducts,loadProductsFetch } from "../data/products.js";
 import { loadCart } from "../data/cart.js";
 
 async function loadPage(){
-    await loadProductsFetch();
-
-   const value= await new Promise ((resolve)=>{
+    try{
+        await loadProductsFetch();
+       //throw 'error 1';
+   const value= await new Promise ((resolve,reject)=>{
+        //throw 'error 2'
         loadCart(()=>{
-            console.log('loaded cart 2')
+            console.log('loaded cart 2');
+            //reject('error 3');
             resolve('value 3');
             })
         })
 
     orderSummaryRender();
     renderPaymentSummary();
+    } catch(error){
+        console.log(error);
+    }
+    
 }
 loadPage();
   

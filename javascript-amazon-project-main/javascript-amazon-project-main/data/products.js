@@ -85,7 +85,9 @@ class Product{
       return new Product(productDetail);
     });
     console.log('fetch laod products');
-  });
+  }).catch(()=>{
+    console.log('unexpected error pls try again later');
+  })
     return promise;
   }
 
@@ -105,9 +107,12 @@ class Product{
     });
     console.log('products loaded');
     fun();
-    
     });
-    
+
+    xhr.addEventListener('error',()=>{
+      console.log('unexpected error');
+    });
+
     xhr.open('GET','https://supersimplebackend.dev/products');
     xhr.send();
   }
