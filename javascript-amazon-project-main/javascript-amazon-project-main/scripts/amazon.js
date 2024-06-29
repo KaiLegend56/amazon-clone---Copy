@@ -80,6 +80,33 @@ function renderProductsGrid(){
         updateCartQuantity();
       });
     });
+    
+    let searchItems=[];
+  document.querySelector('.js-search-button')
+  .addEventListener('click',()=>{
+    //console.log(products[0].keyword);
+    const searchElement=document.querySelector('.js-search-bar');
+    let searchWord=searchElement.value.toLowerCase();
+    console.log(searchWord);
+    displaySearch(searchWord);
+  })  
+  function displaySearch(word){
+    //window.location.href=`amazon.html?search=${word}`
+   /* searchItems=products.map((productData)=>{
+      if(productData.keyword.forEach((keyword)=>{
+
+        return keyword;
+      })===word)
+      return productData;
+      
+    })
+    console.log(searchItems);
+  }*/
+  console.log(products.forEach((product)=>{
+    return product.keyword
+  }))
+}
+  
 }
 
   /*document.querySelectorAll(".js-quantity-select").forEach((select)=>{
