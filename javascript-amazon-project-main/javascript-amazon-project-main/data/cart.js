@@ -22,7 +22,7 @@ export function addToCart(productId) {
 document.querySelectorAll(".js-quantity-select")
   .forEach((select)=>{
     if(select.dataset.productId===productId){
-      matchingQuantity=select.value;
+      matchingQuantity=Number(select.value);
       console.log(matchingQuantity);
       console.log(select);
     }
@@ -37,7 +37,7 @@ document.querySelectorAll(".js-quantity-select")
   });
 
   if (matchingItem) {
-    matchingItem.quantity += 1;
+    matchingItem.quantity += matchingQuantity;
   } else {
     cart.push({
       productId: productId,

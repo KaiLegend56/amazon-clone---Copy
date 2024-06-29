@@ -13,13 +13,14 @@ async function loadPage(){
             console.log('loaded cart 2');
             //reject('error 3');
             resolve('value 3');
+            orderSummaryRender();
+            renderPaymentSummary();
             })
+            
         })
-
-    orderSummaryRender();
-    renderPaymentSummary();
+   
     } catch(error){
-        console.log(error);
+        console.log('error');
     }
     
 }

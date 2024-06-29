@@ -1,4 +1,4 @@
-import { cart } from "../data/cart.js";
+/*import { cart } from "../data/cart.js";
 
 document.querySelector('.js-order-place-button')
 .addEventListener('click',()=>{
@@ -17,4 +17,15 @@ function placeOrder(){
             
         })
     })
+}*/
+export const orders =JSON.parse(localStorage.getItem('orders'))||[]; 
+
+
+export function addOrder(order){
+    orders.unshift(order);
+    saveToStorage();
+}
+
+function saveToStorage(){
+    localStorage.setItem('orders',JSON.stringify(orders));
 }
